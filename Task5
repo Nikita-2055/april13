@@ -1,0 +1,15 @@
+#include<stdio.h>
+void function(char *str1,int size, char *str2){
+    for(int i = 0; i <= size; ++i){
+        str2[i] = str1[i];
+    }
+    printf("%s\n",str2);
+    return ;
+}
+int main(){
+    char str1[] = "hello";
+    int size = sizeof(str1);
+    char str2[size];
+    function(str1,size,str2);
+    return 0;
+}
