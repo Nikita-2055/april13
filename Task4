@@ -1,0 +1,21 @@
+#include<stdio.h>
+void function(char *str,char *str1,int size){
+    for(int i = 0; i < size - 1; ++i){
+        if(i < size){
+            str1[i] = str[i];
+        }else{
+            str[i] = '\0';
+        }
+        printf("%c", str1[i]);
+    }
+    return ;
+
+}
+
+int main(){
+    char str[] = "hello";
+    char str1[4];
+    int size = sizeof(str1);
+    function(str,str1,size);
+    return 0;
+}
